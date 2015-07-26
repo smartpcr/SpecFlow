@@ -11,13 +11,17 @@
     <AppDesignerFolder>Properties</AppDesignerFolder>
     <RootNamespace>TechTalk.SpecFlow</RootNamespace>
     <AssemblyName>TechTalk.SpecFlow.WindowsPhone7</AssemblyName>
-    <TargetFrameworkVersion>v4.0</TargetFrameworkVersion>
+    <TargetFrameworkVersion>v8.0</TargetFrameworkVersion>
     <SilverlightVersion>$(TargetFrameworkVersion)</SilverlightVersion>
-    <TargetFrameworkProfile>WindowsPhone</TargetFrameworkProfile>
-    <TargetFrameworkIdentifier>Silverlight</TargetFrameworkIdentifier>
+    <TargetFrameworkProfile>
+    </TargetFrameworkProfile>
+    <TargetFrameworkIdentifier>WindowsPhone</TargetFrameworkIdentifier>
     <SilverlightApplication>false</SilverlightApplication>
     <ValidateXaml>true</ValidateXaml>
     <ThrowErrorsInValidation>true</ThrowErrorsInValidation>
+    <FileUpgradeFlags>40</FileUpgradeFlags>
+    <UpgradeBackupLocation>C:\Workspaces\GitHub\SpecFlow\Backup\AlternativeRuntimes\Runtime.WindowsPhone7\</UpgradeBackupLocation>
+    <OldToolsVersion>4.0</OldToolsVersion>
   </PropertyGroup>
   <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Debug|AnyCPU' ">
     <DebugSymbols>true</DebugSymbols>
@@ -100,9 +104,9 @@
     <UseCustomWindowsPhoneSDKFolder>true</UseCustomWindowsPhoneSDKFolder>
     <SilverlightRuntimeVersion>4.0</SilverlightRuntimeVersion>
   </PropertyGroup>
-  <Import Project="$(WindowsPhoneBuildResources)\MSBuild\Microsoft.Silverlight.$(TargetFrameworkProfile).Overrides.targets" />
-  <Import Project="$(WindowsPhoneBuildResources)\MSBuild\Microsoft.Silverlight.CSharp.targets" />
-  <Import Project="$(WindowsPhoneBuildResources)\MSBuild\Microsoft.Silverlight.Common.OverridesForBuild.targets" />
+  <Import Project="$(WindowsPhoneBuildResources)\MSBuild\Microsoft.$(TargetFrameworkIdentifier).$(TargetFrameworkVersion).Overrides.targets" />
+  <Import Project="$(WindowsPhoneBuildResources)\MSBuild\Microsoft.$(TargetFrameworkIdentifier).CSharp.targets" />
+  <Import Project="$(WindowsPhoneBuildResources)\MSBuild\Microsoft.$(TargetFrameworkIdentifier).Common.OverridesForBuild.targets" />
   <ProjectExtensions />
   <!-- To modify your build process, add your task inside one of the targets below and uncomment it. 
        Other similar extension points exist, see Microsoft.Common.targets.
